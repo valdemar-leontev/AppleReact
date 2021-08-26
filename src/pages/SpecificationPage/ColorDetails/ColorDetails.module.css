@@ -1,0 +1,24 @@
+.colorDetails {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  width: 50%;
+  height: 50px;
+  gap: 20px;
+
+  margin-bottom: 50px;
+
+  transform: translate(-200%, 0px);
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.colorDetails > div {
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+}

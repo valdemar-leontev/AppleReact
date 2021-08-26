@@ -1,0 +1,76 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  z-index: 1;
+}
+
+section {
+  
+  width: 65%;
+  height: 50px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 1px solid rgb(211, 211, 211);
+}
+
+section > span {
+  
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 25%;
+  font-size: 12px;
+}
+
+.buttons > a > p {
+  align-self: center;
+  transition: 0.5s ease all;
+
+  color: black;
+}
+
+.buttons p:hover {
+  color: rgb(62, 148, 219);
+}
+
+.buy {
+  display: flex;
+
+  width: 65px;
+  height: 23px;
+
+  border-radius: 10px;
+  background-color: #147ce5;
+  color: white;
+
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.5s ease all;
+}
+
+.buy:hover {
+  background-color: #333333;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
