@@ -2,7 +2,7 @@
   width: 100%;
   font-size: 220px;
 
-  color: rgb(24, 24, 24);
+  /* color: rgb(255, 255, 255); */
 
   margin: 10% 0 0 0%;
   position: absolute;
@@ -14,7 +14,6 @@
   opacity: 0;
 
   z-index: -1;
-
 }
 
 .image {
@@ -25,15 +24,15 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 45vmax;
-  
 
   transform: scale(2);
   opacity: 0;
   transition: all 3s cubic-bezier(0.23, 1, 0.32, 1) 0.5s;
-  
+
   margin-bottom: 10%;
 
   overflow: hidden;
+  
 }
 
 .bottomText {
@@ -54,7 +53,6 @@
   transition: all 2s ease;
 
   text-align: center;
-  
 }
 
 .bottomText > div {

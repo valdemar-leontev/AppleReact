@@ -1,41 +1,34 @@
 import React from "react";
-import ScrollAnimatedBlock from "../ScrollAnimatedBlock/ScrollAnimatedBlock";
-import ProductItem from "./ProductItem/ProductItem";
 import styles from "./ProductList.module.css";
-
-const productItems = [
-  {
-    title: "Абсолютно оригинальная композиция",
-    description:
-      "AirPods Max — это совершенно новый взгляд на полноразмерные наушники. Все элементы AirPods Max, от амбушюров до оголовья, спроектированы таким образом, чтобы наушники оптимально прилегали к голове любой формы. Благодаря этому достигается невероятное качество и богатство звука",
-    isReversed: false,
-    image: "/images/akhil-yerabati-Q2uV5TkjNz8-unsplash.jpg",
-  },
-
-  {
-    title: "Абсолютно оригинальная композиция1",
-    description:
-      "AirPods Max — это совершенно новый взгляд на полноразмерные наушники. Все элементы AirPods Max, от амбушюров до оголовья, спроектированы таким образом, чтобы наушники оптимально прилегали к голове любой формы. Благодаря этому достигается невероятное качество и богатство звука",
-    isReversed: true,
-    image: "/images/ervo-rocks-Zam8TvEgN5o-unsplash.jpg",
-  },
-];
+import "./ProductList.css";
+import ScrollAnimatedBlock from "../ScrollAnimatedBlock/ScrollAnimatedBlock";
 
 const ProductList = () => {
   return (
-    <div className={styles.container}>
-      {productItems.map((product) => {
-        return (
-          <ScrollAnimatedBlock animationClass={"_active"}>
-            <ProductItem
-              title={product.title}
-              description={product.description}
-              isReversed={product.isReversed}
-              image={product.image}
-            />
-          </ScrollAnimatedBlock>
-        );
-      })}
+    <div className={styles.mainContainer}>
+      <ScrollAnimatedBlock animationClass={"_active"}>
+        <div className={styles.container}>
+          <div data-animated className={styles.leftColumn}>
+            <div></div>
+          </div>
+
+          <div className={styles.rightColumn}>
+            <div data-animated className={styles.img1}></div>
+            <p>
+              Благодаря{" "}
+              <span style={{ color: "black" }}>особой сетчатой ткани</span>{" "}
+              <br /> амбушюры отличаются невероятной мягкостью.
+            </p>
+            <div data-animated className={styles.img2}></div>
+            <p>
+              <span style={{ color: "black" }}>Амбушюры </span>
+              из акустически оптимизированного пеноматериала с эффектом памяти
+              мягко закрывают ушную раковину, обеспечивают качественную
+              звукоизоляцию и создают основу для потрясающего звука.
+            </p>
+          </div>
+        </div>
+      </ScrollAnimatedBlock>
     </div>
   );
 };

@@ -47,23 +47,19 @@ const SpecificationPage = () => {
 
   return (
     <div className={styles.mainContainer}>
-      <ScrollAnimatedBlock animationClass={"_active"}>
-        <div className={styles.container}>
-          <p data-animated className={styles.colorItemText}>
-            {images.find((i) => i.id === colorId).title}
-          </p>
+      <div className={styles.container}>
+        <p className={styles.colorItemText}>
+          {images.find((i) => i.id === colorId).title}
+        </p>
 
-          <div
-            data-animated
-            className={styles.image}
-            style={{
-              backgroundImage: `url(${
-                images.find((i) => i.id === colorId).url
-              })`,
-            }}
-          ></div>
-        </div>
-      </ScrollAnimatedBlock>
+        <div
+          className={styles.image}
+          style={{
+            backgroundImage: `url(${images.find((i) => i.id === colorId).url})`,
+          }}
+        ></div>
+      </div>
+
       <ColorDetails onChangeHandler={onChangeColorHandler} />
 
       <ScrollAnimatedBlock animationClass={"_active"}>
@@ -146,7 +142,7 @@ const SpecificationPage = () => {
         </MoreDetails>
       </ScrollAnimatedBlock>
 
-      <ScrollAnimatedBlock animationClass={"_active"}>        
+      <ScrollAnimatedBlock animationClass={"_active"}>
         <MoreDetails>
           <span>Размеры и вес</span>
           <div>

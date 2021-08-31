@@ -1,0 +1,99 @@
+.mainContainer {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 300vh;
+
+  background: linear-gradient(black 70%, grey);
+}
+
+.container {
+  width: 95%;
+
+  margin-top: 10%;
+}
+
+.titleContainer {
+  width: 67%;
+  margin-left: 5%;
+}
+
+.title {
+  color: white;
+
+  font-size: 96px;
+  font-weight: bold;
+}
+
+.text {
+  width: 88%;
+  margin-top: 5%;
+  color: grey;
+  font-size: 24px;
+  font-weight: bold;
+
+  margin-bottom: 150px;
+}
+
+.imageContainer {
+  width: 100%;
+  height: 200vh;
+
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+
+  flex: 5;
+}
+
+.img1 {
+  width: 100%;
+  height: 200vh;
+
+  background-image: url(../../images/greenSound1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.leftText {
+  width: 95%;
+  height: 50vh;
+
+  color: grey;
+
+  font-size: 24px;
+
+  padding:  50px
+}
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+
+  flex: 3;
+}
+
+.img2 {
+  width: 100%;
+  height: 95vh;
+
+  background-image: url(../../images/greenSound2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.rightColumn > p {
+  color: grey;
+  font-size: 24px;
+  font-weight: bold;
+
+  margin-top: 7%;
+}

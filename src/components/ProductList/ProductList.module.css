@@ -1,12 +1,90 @@
-.container {
+.mainContainer {
   display: flex;
-  flex-direction: column;
-
-  width: 100%;
-  min-height: 100vh;
-
-  align-items: center;
   justify-content: center;
 
-  row-gap: 150px;
+  width: 100%;
+  min-height: 160vh;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+
+  gap: 30px;
+  width: 95%;
+
+  margin-left: 35px;
+}
+
+.leftColumn {
+  display: inline-block;
+  flex: 10;
+
+  opacity: 0;
+  transform: translate(-120%, 0px);
+  transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.leftColumn > * {
+  min-height: 200vh;
+
+  background-image: url(../../images/red1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.rightColumn {
+  display: flex;
+  flex: 6;
+  flex-direction: column;
+}
+
+.img1 {
+  background-image: url(../../images/red2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  width: 100%;
+  height: 85vh;
+
+  opacity: 0;
+  transform: translate(120%, 0px);
+  transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  
+}
+
+.img2 {
+  background-image: url(../../images/red3.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  width: 100%;
+  height: 100vh;
+
+  opacity: 0;
+  transform: translate(120%, 0px);
+  transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  
+}
+
+.rightColumn > p {
+  font-size: 24px;
+  font-weight: 600;
+
+  color: grey;
+
+  padding: 30px 0px 100px 0px;
+
+  overflow: hidden;
+
+  /* opacity: 0.5;
+  transform: translate(-120%, 0px);
+  transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1); */
 }

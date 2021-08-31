@@ -4,12 +4,16 @@ import "./HomePageAnimated.css";
 import { AiFillPlayCircle } from "react-icons/ai";
 import ScrollAnimatedBlock from "../../components/ScrollAnimatedBlock/ScrollAnimatedBlock";
 import ProductList from "../../components/ProductList/ProductList";
+import DigitalCrown from "../../components/DigitalCrown/DigitalCrown";
+import SpecificationPage from "../SpecificationPage/SpecificationPage";
+import Gallery from "../../components/Gallery/Gallery";
+import SoundInfo from "../../components/SoundInfo/SoundInfo";
 
 const HomePage = () => {
   return (
     <>
       <ScrollAnimatedBlock animationClass={"_active"}>
-        <div style={{overflow: "hidden"}}>
+        <div style={{ overflow: "hidden" }}>
           <h1 data-animated className={styles.text}>
             AirPods Max
           </h1>
@@ -31,6 +35,12 @@ const HomePage = () => {
       </ScrollAnimatedBlock>
 
       <ProductList />
+
+      <DigitalCrown />
+
+      <Gallery />
+
+      <SoundInfo />
     </>
   );
 };

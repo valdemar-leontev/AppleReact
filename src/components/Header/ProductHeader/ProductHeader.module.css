@@ -13,7 +13,6 @@
 }
 
 section {
-  
   width: 65%;
   height: 50px;
 
@@ -25,7 +24,6 @@ section {
 }
 
 section > span {
-  
   font-size: 21px;
   font-weight: 500;
 }
