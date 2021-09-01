@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import styles from './ScrollAnimatedBlock.module.css'
 
 const ScrollAnimatedBlock = ({ children, animationClass }) => {
   const { ref, inView, entry } = useInView();

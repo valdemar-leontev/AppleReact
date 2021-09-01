@@ -8,6 +8,8 @@ import DigitalCrown from "../../components/DigitalCrown/DigitalCrown";
 import SpecificationPage from "../SpecificationPage/SpecificationPage";
 import Gallery from "../../components/Gallery/Gallery";
 import SoundInfo from "../../components/SoundInfo/SoundInfo";
+import Bandit from "../../components/Bandit/Bandit";
+import MoreFeatures from "../../components/MoreFeatures/MoreFeatures";
 
 const HomePage = () => {
   return (
@@ -41,6 +43,10 @@ const HomePage = () => {
       <Gallery />
 
       <SoundInfo />
+
+      <Bandit />
+
+      <MoreFeatures />
     </>
   );
 };
