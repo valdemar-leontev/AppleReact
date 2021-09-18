@@ -10,6 +10,8 @@ import Gallery from "../../components/Gallery/Gallery";
 import SoundInfo from "../../components/SoundInfo/SoundInfo";
 import Bandit from "../../components/Bandit/Bandit";
 import MoreFeatures from "../../components/MoreFeatures/MoreFeatures";
+import Case from "../../components/Case/Case";
+import Footer from "../../components/Footer/Footer";
 
 const HomePage = () => {
   return (
@@ -47,6 +49,10 @@ const HomePage = () => {
       <Bandit />
 
       <MoreFeatures />
+
+      <Case />
+
+      <Footer />
     </>
   );
 };

@@ -1,10 +1,12 @@
 import React from "react";
 import styles from "./MainHeader.module.css";
-import { AiFillApple } from "react-icons/ai";
+import { AiFillApple, AiOutlineSearch } from "react-icons/ai";
+import { RiShoppingBasket2Line } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 const MainHeader = () => {
   return (
-    <header className={styles.container} >
+    <header className={styles.container}>
       <AiFillApple size={25} color={"white"} className={styles.icon} />
       <ul className={styles.menu}>
         <li>
@@ -31,6 +33,17 @@ const MainHeader = () => {
         <li>
           <a href="#">Help</a>
         </li>
+        <li>
+          <AiOutlineSearch color="grey" size="22" />
+        </li>
+
+        <Link to="/registration">
+          <RiShoppingBasket2Line color="grey" size="22" />
+        </Link>
+
+        {/* <li>
+          <RiShoppingBasket2Line color="grey" size="22" />
+        </li> */}
       </ul>
     </header>
   );

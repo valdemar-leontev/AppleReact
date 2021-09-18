@@ -151,6 +151,8 @@ const SpecificationPage = () => {
           </div>
         </MoreDetails>
       </ScrollAnimatedBlock>
+
+      <Footer />
     </div>
   );
 };

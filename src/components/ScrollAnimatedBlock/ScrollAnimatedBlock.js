@@ -12,7 +12,7 @@ const ScrollAnimatedBlock = ({ children, animationClass }) => {
         if (inView) {
           animatedTarget.classList.add(animationClass);
         } else {
-          animatedTarget.classList.remove(animationClass);
+          // animatedTarget.classList.remove(animationClass);
         }
       });
     }

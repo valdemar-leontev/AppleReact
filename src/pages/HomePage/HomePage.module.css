@@ -2,8 +2,6 @@
   width: 100%;
   font-size: 220px;
 
-  /* color: rgb(255, 255, 255); */
-
   margin: 10% 0 0 0%;
   position: absolute;
 
@@ -32,7 +30,6 @@
   margin-bottom: 10%;
 
   overflow: hidden;
-  
 }
 
 .bottomText {
