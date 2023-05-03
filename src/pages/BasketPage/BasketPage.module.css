@@ -1,0 +1,47 @@
+.mainContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    margin-bottom: 50px;
+}
+
+
+.title {
+    font-size: 44px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    color: #444444;
+}
+
+.toPurchase {
+    margin-top: 15%;
+    margin-bottom: 15%;
+    width: 300px;
+    border-radius: 50px 10px 50px 10px;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    font-size: 20px;
+    color: black;
+    border: none;
+}
+
+.toPurchase:hover {
+    border-radius: 10px 50px 10px 50px;
+    background-color: #5f97c5;
+    color: white;
+}

@@ -1,0 +1,41 @@
+.mainContainer {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100px;
+    transition: 0.5s ease;
+    margin-bottom: 10px;
+    padding: 30px;
+    box-shadow: 0 0 5px #e3e3e3;
+}
+
+.mainContainer:hover {
+    box-shadow: 0 0 7px grey;
+    height: 130px;
+}
+
+.productImage {
+    flex: 1;
+    height: 90px;
+    width: 80px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 5vmax;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.text {
+    flex: 3;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+}
+
+span {
+    margin: 10px;
+}
