@@ -16,10 +16,6 @@ body::-webkit-scrollbar {
   width: 0.7em;
 }
 
-body::-webkit-scrollbar:hover {
-  width: 0.9em;
-}
-
 body::-webkit-scrollbar-track {
   box-shadow: inset 0 0 70px rgb(214, 214, 214);
   border-radius: 10px;

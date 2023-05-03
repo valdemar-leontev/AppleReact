@@ -1,6 +1,9 @@
-import React, { useCallback, useState } from "react";
+import React, {useCallback, useState} from "react";
 import styles from "./Gallery.module.css";
-import ColorDetails from "../../pages/SpecificationPage/ColorDetails/ColorDetails";
+import ColorDetails from "../ColorDetails/ColorDetails";
+import axios from "axios";
+import {useHistory} from "react-router-dom";
+import Button from "../../../components/UI/Button";
 
 const images = [
   {
@@ -35,31 +38,60 @@ const images = [
 ];
 
 const SpecificationPage = () => {
+  const history = useHistory();
+
   const [colorId, setColorId] = useState(1);
 
   const onChangeColorHandler = useCallback((id) => {
     setColorId(id);
   }, []);
 
+  const addBasketItemAsync = useCallback(async (productId, customerId) => {
+    try {
+      const response = await axios.post("https://localhost:5001/basket/",
+        {
+          productId: productId,
+          customerId: customerId
+        });
+
+      if (response.status === 200) {
+        history.push("/customer-basket");
+      }
+    } catch (ex) {
+      console.log(ex);
+    }
+  }, [history])
+
   return (
     <div className={styles.mainContainer}>
       <div className={styles.container}>
-        <span className={styles.text}>
-          Five colors. <br /> Anything but <br /> monotone.
+
+        <div className={styles.textContainer}>
+          <span className={styles.text}>
+          Five colors. <br/> Anything but <br/> monotone.
         </span>
+
+          <Button
+            onClick={async () => {
+              await addBasketItemAsync(1, 1)
+            }}>Buy
+          </Button>
+        </div>
+
 
         <div
           className={styles.image}
           style={{
             backgroundImage: `url(${images.find((i) => i.id === colorId).url})`,
           }}
-        ></div>
+        />
+
         <p className={styles.colorItemText}>
           {images.find((i) => i.id === colorId).title}
         </p>
       </div>
 
-      <ColorDetails onChangeHandler={onChangeColorHandler} />
+      <ColorDetails onChangeHandler={onChangeColorHandler}/>
     </div>
   );
 };

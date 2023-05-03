@@ -5,23 +5,25 @@ import { AiFillPlayCircle } from "react-icons/ai";
 import ScrollAnimatedBlock from "../../components/ScrollAnimatedBlock/ScrollAnimatedBlock";
 import ProductList from "../../components/ProductList/ProductList";
 import DigitalCrown from "../../components/DigitalCrown/DigitalCrown";
-import SpecificationPage from "../SpecificationPage/SpecificationPage";
-import Gallery from "../../components/Gallery/Gallery";
+import Gallery from "../SpecificationPage/Gallery/Gallery";
 import SoundInfo from "../../components/SoundInfo/SoundInfo";
 import Bandit from "../../components/Bandit/Bandit";
 import MoreFeatures from "../../components/MoreFeatures/MoreFeatures";
 import Case from "../../components/Case/Case";
 import Footer from "../../components/Footer/Footer";
+import ProductHeader from "../../components/Header/ProductHeader/ProductHeader";
 
 const HomePage = () => {
   return (
     <>
+      <ProductHeader />
       <ScrollAnimatedBlock animationClass={"_active"}>
         <div style={{ overflow: "hidden" }}>
           <h1 data-animated className={styles.text}>
             AirPods Max
           </h1>
-          <div data-animated className={styles.image}></div>
+
+          <div data-animated className={styles.image}/>
           <div data-animated className={styles.bottomText}>
             <div>
               <span>
@@ -30,7 +32,7 @@ const HomePage = () => {
                 блестящем исполнении.
               </span>
               <div className={styles.link}>
-                <a href="#">Смотрите видео Путешествие в звука</a>
+                <a href="/">Смотрите видео Путешествие в звука</a>
                 <AiFillPlayCircle color={"black"} />
               </div>
             </div>

@@ -1,4 +1,4 @@
-.text {
+/*.text {
   width: 100%;
   font-size: 220px;
 
@@ -12,6 +12,33 @@
   opacity: 0;
 
   z-index: -1;
+}*/
+
+.text {
+  width: 100%;
+  font-size: 220px;
+  margin: 10% 0 0 0%;
+  position: absolute;
+  text-align: center;
+  transform: scale(0.3);
+  transition: all 3s cubic-bezier(0.1, 1, 0.32, 1) 1.5s;
+  opacity: 0;
+  z-index: -1;
+
+  background: linear-gradient(90deg, #000000, #5e5e5e, #000000) repeat;
+  background-size: 90%;
+  -webkit-background-clip: text;
+  animation: animate 4s linear infinite;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
 }
 
 .image {

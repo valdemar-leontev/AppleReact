@@ -41,11 +41,12 @@ const ColorDetails = ({ onChangeHandler }) => {
         {colors.map((color) => {
           return (
             <div
-              style={{ background: color.background }}
+              key={color.id}
+              style={{background: color.background}}
               onClick={() => {
-                onChangeHandler(color.id);
+              onChangeHandler(color.id);
               }}
-            ></div>
+            />
           );
         })}
       </div>

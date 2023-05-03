@@ -3,10 +3,11 @@ import axios from "axios";
 import styles from "./BasketPage.module.css";
 import Footer from "../../components/Footer/Footer";
 import ProductItem from "./ProductItem/ProductItem";
-import {Link} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
+import {RiShoppingBasket2Line} from "react-icons/ri";
 
 function BasketPage() {
-
+  const history = useHistory();
   const [basketItemList, setBasketItemList] = useState(null);
 
   useEffect(() => {
@@ -35,23 +36,32 @@ function BasketPage() {
     }
   }, [basketItemList]);
 
-  const addPurchase = useCallback(async () => {
+  const addPurchaseAsync = useCallback(async () => {
     try {
-      const response = await axios.post("https://localhost:5001/Purchase",
-        {
-          basketItemIds: [1, 2, 3]
-        },
-        /*{
-          params: {
+      const deleteUnorderedPurchasesResponse = await axios.request({
+        url: "https://localhost:5001/Purchase/all-unordered/1",
+        method: "DELETE",
+        headers: {
+          Accept: "application/json"
+        }
+      })
+
+      const response = await axios.request({
+          url: "https://localhost:5001/Purchase",
+          method: "POST",
+          data: {
             customerId: 1
+          },
+          headers: {
+            Accept: "application/json"
           }
-        }*/);
-      console.log(response);
+        });
+
+      return response.data;
     } catch (ex) {
       console.log(ex)
     }
   }, []);
-
 
   return (
     <>
@@ -68,10 +78,10 @@ function BasketPage() {
             return <ProductItem key={b.id} basketItem={b} onRemoveCallback={removeAsync}/>
           }) : <div>Basket is empty</div>}
 
-          <Link to="/purchase">
-            <input className={styles.toPurchase} type="button" value="Proceed" onClick={addPurchase}/>
-          </Link>
-
+          <input className={styles.toPurchase} type="button" value="Proceed" onClick={async () => {
+            const { id } = await addPurchaseAsync();
+            history.push(`/purchase/${id}`);
+          }}/>
         </div>
       </div>
       <Footer/>

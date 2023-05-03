@@ -1,10 +1,11 @@
-import React, { useCallback, useState } from "react";
+import React, {useCallback, useState} from "react";
 import styles from "./SpecificationPage.module.css";
 import "./SpecificationPage.css";
 import ColorDetails from "./ColorDetails/ColorDetails";
 import MoreDetails from "./MoreDetails/MoreDetails";
 import ScrollAnimatedBlock from "../../components/ScrollAnimatedBlock/ScrollAnimatedBlock";
 import Footer from "../../components/Footer/Footer";
+import ProductHeader from "../../components/Header/ProductHeader/ProductHeader";
 
 const images = [
   {
@@ -47,20 +48,21 @@ const SpecificationPage = () => {
 
   return (
     <div className={styles.mainContainer}>
+      <ProductHeader />
       <div className={styles.container}>
         <p className={styles.colorItemText}>
           {images.find((i) => i.id === colorId).title}
         </p>
 
         <div
-          className={styles.image}
-          style={{
-            backgroundImage: `url(${images.find((i) => i.id === colorId).url})`,
-          }}
-        ></div>
+  className={styles.image}
+  style={{
+    backgroundImage: `url(${images.find((i) => i.id === colorId).url})`,
+  }}
+  />
       </div>
 
-      <ColorDetails onChangeHandler={onChangeColorHandler} />
+      <ColorDetails onChangeHandler={onChangeColorHandler}/>
 
       <ScrollAnimatedBlock animationClass={"_active"}>
         <MoreDetails>
@@ -95,7 +97,7 @@ const SpecificationPage = () => {
         <MoreDetails>
           <span>Микрофоны</span>
           <div>
-            <p style={{ fontWeight: "700", marginBottom: "10px" }}>
+            <p style={{fontWeight: "700", marginBottom: "10px"}}>
               Девять микрофонов:
             </p>
             <p>
@@ -120,7 +122,7 @@ const SpecificationPage = () => {
         <MoreDetails>
           <span>Управление</span>
           <div>
-            <p style={{ fontWeight: "700", marginBottom: "10px" }}>
+            <p style={{fontWeight: "700", marginBottom: "10px"}}>
               Колёсико Digital Crown
             </p>
             <p>Поверните, чтобы отрегулировать громкость</p>
@@ -131,7 +133,7 @@ const SpecificationPage = () => {
             <p>Нажмите дважды, чтобы перейти к следующему треку</p>
             <p>Нажмите трижды, чтобы вернуться к предыдущему треку</p>
             <p>Нажмите и удерживайте, чтобы вызвать Siri</p>
-            <p style={{ fontWeight: "700", marginBottom: "10px" }}>
+            <p style={{fontWeight: "700", marginBottom: "10px"}}>
               Кнопка управления шумоподавлением
             </p>
             <p>
@@ -147,12 +149,12 @@ const SpecificationPage = () => {
           <span>Размеры и вес</span>
           <div>
             <p>AirPods Max (вместе с амбушюрами)</p>
-            <div className={styles.case}></div>
+            <div className={styles.case} />
           </div>
         </MoreDetails>
       </ScrollAnimatedBlock>
 
-      <Footer />
+      <Footer/>
     </div>
   );
 };

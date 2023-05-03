@@ -29,9 +29,9 @@ const MoreFeatures = () => {
 
       <ScrollAnimatedBlock animationClass={"featuresAnimation"}>
         <div className={styles.setup}>
-          <div data-animated className={styles.image}></div>
+          <div data-animated className={styles.image}/>
           <p data-animated className={styles.description}>
-            <p className={styles.descriptionTitle}>One-tap setup</p>
+            <span className={styles.descriptionTitle}>One-tap setup</span>
             AirPods Max connect immediately to your iPhone or iPad. To pair,
             simply place AirPods Max near your device and tap Connect on your
             screen
@@ -55,7 +55,7 @@ const MoreFeatures = () => {
             </div>
           </ScrollAnimatedBlock>
           <ScrollAnimatedBlock animationClass={"featuresAnimation"}>
-            <div data-animated item2 className={styles.item}>
+            <div data-animated className={styles.item}>
               <h3>Announce Messages</h3>
               <p>
                 Let Siri speak incoming messages as they arrive with Announce
@@ -65,7 +65,7 @@ const MoreFeatures = () => {
             </div>
           </ScrollAnimatedBlock>
           <ScrollAnimatedBlock animationClass={"featuresAnimation"}>
-            <div data-animated item3 className={styles.item}>
+            <div data-animated className={styles.item}>
               <h3>Always-on Siri</h3>
               <p>
                 Get directions, check the weather, schedule a meeting, and more

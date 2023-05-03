@@ -1,0 +1,177 @@
+
+.mainContainer {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 5%;
+}
+
+.menuContainer {
+    width: 100%;
+    height: 60px;
+
+    background-color: rgb(255, 255, 255);
+
+    border: 1px rgb(233, 233, 233) solid;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menuContainer > h2 {
+    margin-left: 15%;
+}
+
+.menuContainer > ul {
+    width: 30%;
+
+    margin-right: 15%;
+
+    font-size: 13px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    cursor: pointer;
+}
+
+.menuContainer > ul > li {
+    color: rgb(0, 0, 0);
+    transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.menuContainer > ul > li:hover {
+    color: rgb(62, 148, 219);
+}
+
+.text {
+    font-size: 52px;
+    font-weight: bold;
+
+    background: -webkit-linear-gradient(180deg, black, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.imageBlurContainer {
+    width: 100%;
+    height: 250px;
+
+    background-image: url(../../images/laurenz-heymann-VkfhJLz5SMQ-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vmax;
+    background-position: center;
+
+    filter: grayscale(0.9);
+
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageBlurContainer:hover {
+    background-size: 150vmax;
+
+    filter: grayscale(0);
+}
+
+.registrationContainer {
+    width: 70%;
+
+    margin-top: 3%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.registrationContainer > p {
+    font-size: 20px;
+    text-align: center;
+
+    margin-bottom: 1%;
+}
+
+.mainData {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+input {
+    margin: 2% 0 2% 0;
+    padding: 10px;
+    padding-left: 15px;
+    border: 1px solid rgb(209, 209, 209);
+    border-radius: 5px;
+
+    font-size: 16px;
+}
+
+.mainData > input {
+    width: 35%;
+    height: 30px;
+}
+
+.moreData {
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+
+    margin: 2% 0 2% 0;
+
+    color: grey;
+}
+
+.moreData > input {
+    width: 94.5%;
+    height: 30px;
+}
+
+.trashText {
+    width: 50%;
+
+    color: grey;
+}
+
+section {
+    width: 100%;
+    height: 1px;
+}
+
+.registrationContainer > p > a {
+    color: #0070c9;
+}
+
+.registrationContainer > p > a:hover {
+    border-bottom: 1px solid #0070c9;
+}
+
+.sendInfo {
+    cursor: pointer;
+    margin-top: 5%;
+    width: 30%;
+    border-radius: 50px 10px 50px 10px;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    font-size: 20px;
+    color: white;
+    background-color: #5f97c5;
+    border: none;
+}
+
+.sendInfo:hover {
+    border-radius: 10px 50px 10px 50px;
+    background-color: #5f97c5;
+    color: white;
+}

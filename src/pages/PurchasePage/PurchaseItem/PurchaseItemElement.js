@@ -1,21 +1,19 @@
-import React, {useCallback, useState} from 'react';
+import React from 'react';
 import styles from "./PurchaseElement.module.css"
-import Button from "../../../components/UI/Button";
 
-function PurchaseElement(props) {
+function PurchaseItemElement({productItem}) {
   return (
     <div className={styles.mainContainer}>
       <div className={styles.purchaseItem}>
         <div className={styles.title}>Dispatch in 3-4 weeks.</div>
         <div className={styles.mainInfo}>
-          <div className={styles.image}></div>
-          <div className={styles.description}>MacBook Pro <br/> 14-inch <br/> Space Gray</div>
+            <img className={styles.image} src={productItem.imageUrl} alt=""/>
+          <div className={styles.description}>{productItem.name}, {productItem.color}, {productItem.price}</div>
         </div>
       </div>
 
-      <Button>Proceed</Button>
     </div>
   );
 }
 
-export default PurchaseElement;
+export default PurchaseItemElement;

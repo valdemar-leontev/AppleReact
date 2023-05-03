@@ -1,24 +1,29 @@
-.container {
+.mainContainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 
   width: 100%;
+  height: 50px;
 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
   z-index: 1;
+
+  top: 45px;
+
 }
 
-section {
-  width: 65%;
-  height: 50px;
-
+.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  width: 65%;
+  height: 50px;
+
 
   border-bottom: 1px solid rgb(211, 211, 211);
 }
@@ -46,26 +51,6 @@ section > span {
 
 .buttons p:hover {
   color: rgb(62, 148, 219);
-}
-
-.buy {
-  display: flex;
-
-  width: 65px;
-  height: 23px;
-
-  border-radius: 10px;
-  background-color: #147ce5;
-  color: white;
-
-  justify-content: center;
-  align-items: center;
-
-  transition: 0.5s ease all;
-}
-
-.buy:hover {
-  background-color: #333333;
 }
 
 a {
