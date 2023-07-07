@@ -34,11 +34,11 @@
 }
 
 .image {
-  width: 80%;
+  width: 85%;
 
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 90vh;
+  background-size: 80vh;
 
   transition: 0.5s ease all;
 /* 
