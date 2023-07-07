@@ -3,8 +3,7 @@ import axios from "axios";
 import styles from "./BasketPage.module.css";
 import Footer from "../../components/Footer/Footer";
 import ProductItem from "./ProductItem/ProductItem";
-import {Link, useHistory} from "react-router-dom";
-import {RiShoppingBasket2Line} from "react-icons/ri";
+import {useHistory} from "react-router-dom";
 
 function BasketPage() {
   const history = useHistory();
@@ -38,7 +37,7 @@ function BasketPage() {
 
   const addPurchaseAsync = useCallback(async () => {
     try {
-      const deleteUnorderedPurchasesResponse = await axios.request({
+      await axios.request({
         url: "https://localhost:5001/Purchase/all-unordered/1",
         method: "DELETE",
         headers: {
